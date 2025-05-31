@@ -470,63 +470,8 @@ function returnChartComponent(name, svg) {
         'mapopen-loading': mode.includes('map'),
         'half-loading': mode === 'half',
       }"
-		>
-			<div />
-		</div>
-		<!-- Footer -->
-		<div
-			v-if="footer && (!mode.includes('map') || toggleOn)"
-			class="dashboardcomponent-footer"
-		>
-			<div
-				v-if="!mode.includes('map')"
-				@mouseenter="changeShowTagTooltipState(true)"
-				@mousemove="updateMouseLocation"
-				@mouseleave="changeShowTagTooltipState(false)"
-			>
-				<ComponentTag
-					v-if="config.map_filter && config.map_config"
-					:icon="mode === 'preview' ? '' : 'tune'"
-					text="篩選地圖"
-					class="hide-if-mobile"
-				/>
-				<ComponentTag
-					v-if="config.map_config && config.map_config[0] !== null"
-					:icon="mode === 'preview' ? '' : 'map'"
-					text="空間資料"
-					class="hide-if-mobile"
-				/>
-				<ComponentTag
-					v-if="config.history_config?.range"
-					:icon="mode === 'preview' ? '' : 'insights'"
-					text="歷史資料"
-					class="history-tag"
-				/>
-			</div>
-			<div v-else />
-			<button
-				v-if="infoBtn"
-				@click="$emit('info', config)"
-			>
-				<p>{{ infoBtnText }}</p>
-				<span>arrow_circle_right</span>
-			</button>
-		</div>
-		<div
-			v-else-if="!mode.includes('map')"
-			class="dashboardcomponent-footer"
-		/>
-	</div>
-	<Teleport to="body">
-		<!-- The class "chart-tooltip" could be edited in /assets/styles/chartStyles.css -->
-		<TagTooltip
-			v-if="showTagTooltip"
-			:position="tooltipPosition"
-			:has-filter="config.map_filter ? true : false"
-			:has-map-layer="
-        config.map_config && config.map_config[0] ? true : false
-      "
-			:has-history="config.history_config?.range ? true : false"
+      config.map_config && config.map_config[0] ? true : false"
+      :has-history="config.history_config?.range ? true : false"
 		/>
 	</Teleport>
 </template>
