@@ -3,6 +3,8 @@ package middleware
 import (
 	"fmt"
 	"net/http"
+	"slices"
+	"strconv"
 	"time"
 
 	"TaipeiCityDashboardBE/app/cache"
@@ -62,12 +64,30 @@ func LimitTotalRequests(limit int, timeframe time.Duration) gin.HandlerFunc {
 			userIdentifier = c.ClientIP()
 		}
 
-		// TO BE COMPLETED: check if white_listed or black_listed and skip if so
+		// check if white_listed or black_listed and skip if so
+		whiteList, err := cache.Redis.SMembers("user:whitelist").Result()
+		if err != nil {
+			c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"status": "error", "message": "Error get white list from Redis"})
+		}
+		accountID := c.GetInt("accountID")
+		accountIdStr := strconv.Itoa(accountID)
+		if isWhiteListed := slices.Contains(whiteList, accountIdStr); isWhiteListed {
+			c.Next()
+			return
+		}
+		blackList, err := cache.Redis.SMembers("user:blacklist").Result()
+		if err != nil {
+			c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"status": "error", "message": "Error get black list from Redis"})
+		}
+		if isBlackListed := slices.Contains(blackList, accountIdStr); isBlackListed {
+			c.AbortWithStatusJSON(http.StatusForbidden , gin.H{"status": "error", "message": "The auth user is in the black list"})
+		}
+
 
 		redisKey := fmt.Sprint("User_Total:", userIdentifier)
 
 		// Remove any old records
-		_, err := cache.Redis.ZRemRangeByScore(redisKey, "0", fmt.Sprint(currentTime-timeframe.Nanoseconds())).Result()
+		_, err = cache.Redis.ZRemRangeByScore(redisKey, "0", fmt.Sprint(currentTime-timeframe.Nanoseconds())).Result()
 		if err != nil {
 			c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"status": "error", "message": "Error removing old records from Redis"})
 		}
