@@ -1,0 +1,135 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.43568,25.036458 ]
+    },
+    "properties": {
+    "district":"新莊區",
+    "flooding_zone":"三泰路(輔仁大學)",
+    "flooding_causes":"地勢低漥",
+    "areacode":65000050
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.4702504,25.07837907 ]
+    },
+    "properties": {
+    "district":"土城區",
+    "flooding_zone":"金城路與和平路口",
+    "flooding_causes":"地勢低漥",
+    "areacode":65000130
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.4364196,24.96121182 ]
+    },
+    "properties": {
+    "district":"土城區",
+    "flooding_zone":"承天路4巷8巷",
+    "flooding_causes":"地勢低漥",
+    "areacode":65000130
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.4650731,25.00262919 ]
+    },
+    "properties": {
+    "district":"中和區",
+    "flooding_zone":"忠孝路2巷",
+    "flooding_causes":"地勢低漥",
+    "areacode":65000030
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5198257,25.00465384 ]
+    },
+    "properties": {
+    "district":"永和區",
+    "flooding_zone":"永利路、永貞路口",
+    "flooding_causes":"地勢低漥",
+    "areacode":65000040
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5391486,24.98717012 ]
+    },
+    "properties": {
+    "district":"新店區",
+    "flooding_zone":"復興路32號~80巷一帶",
+    "flooding_causes":"地勢低漥",
+    "areacode":65000060
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.4542532,25.0239662 ]
+    },
+    "properties": {
+    "district":"板橋區",
+    "flooding_zone":"板橋國中",
+    "flooding_causes":"地勢低漥",
+    "areacode":65000010
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.4913211,25.05482612 ]
+    },
+    "properties": {
+    "district":"三重區",
+    "flooding_zone":"三重高中",
+    "flooding_causes":"地勢低漥",
+    "areacode":65000020
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.4591522,25.15518247 ]
+    },
+    "properties": {
+    "district":"淡水區",
+    "flooding_zone":"環球經貿園區中正東路二段69號前",
+    "flooding_causes":"地勢低漥",
+    "areacode":65000100
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.37817,24.93891321 ]
+    },
+    "properties": {
+    "district":"三峽區",
+    "flooding_zone":"大義路、三樹路口",
+    "flooding_causes":"地勢低漥",
+    "areacode":65000090
+    }
+  }
+]
+}

@@ -83,6 +83,7 @@ export const useMapStore = defineStore("map", {
 			mapboxGl.accessToken = MAPBOXTOKEN;
 			this.map = new mapboxGl.Map({
 				...MapObjectConfig,
+				// style: import.meta.env.VITE_MAPBOX_STYLE,
 				style: mapStyle,
 			});
 			this.marker = new mapboxGl.Marker();
@@ -132,6 +133,29 @@ export const useMapStore = defineStore("map", {
 		initializeBasicLayers() {
 			const authStore = useAuthStore();
 			if (!this.map) return;
+
+			// 加入地形效果
+			// this.map.addSource('mapbox-dem', {
+			// 	type: 'raster-dem',
+			// 	url: 'mapbox://mapbox.terrain-rgb',
+			// 	tileSize: 512,
+			// 	maxzoom: 14
+			// });
+
+			// 設定地形效果（含放大倍率）
+			// this.map.setTerrain({ source: 'mapbox-dem', exaggeration: 1.5 });
+
+			// 加入天空圖層（強化立體感）
+			// this.map.addLayer({
+			// 	id: 'sky',
+			// 	type: 'sky',
+			// 	paint: {
+			// 		'sky-type': 'atmosphere',
+			// 		'sky-atmosphere-sun': [0.0, 0.0],
+			// 		'sky-atmosphere-sun-intensity': 15
+			// 	}
+			// });
+
 			// metroTaipei District Labels
 			fetch(`/mapData/metrotaipei_town.geojson`)
 				.then((response) => response.json())
@@ -159,7 +183,7 @@ export const useMapStore = defineStore("map", {
 				this.map
 					.addSource("taipei_building_3d_source", {
 						type: "vector",
-						url: import.meta.env.VITE_MAPBOXTILE,
+						url: `${import.meta.env.VITE_MAPBOXTILE}`,
 					})
 					.addLayer(TaipeiBuilding);
 			}
@@ -390,7 +414,7 @@ export const useMapStore = defineStore("map", {
 							`https://citydashboard.taipei/geo_server/gwc/service/tms/1.0.0/taipei_vioc:${map_config.index}@EPSG:900913@pbf/{z}/{x}/{y}.pbf`,
 						],
 					});
-		
+
 					// 監聽錯誤
 					this.map.on('error', (e) => {
 						if (e.sourceId === `${map_config.layerId}-source`) {
@@ -406,7 +430,7 @@ export const useMapStore = defineStore("map", {
 							);
 						}
 					});
-		
+
 					// 監聽源加載完成
 					const sourceLoaded = new Promise((resolve, reject) => {
 						const checkSource = (e) => {
@@ -422,22 +446,22 @@ export const useMapStore = defineStore("map", {
 								}
 							}
 						};
-						
+
 						this.map.on('sourcedata', checkSource);
-						
+
 						// 設置超時
 						setTimeout(() => {
 							this.map.off('sourcedata', checkSource);
 							reject(new Error('Source load timeout'));
 						}, 10000);
 					});
-		
+
 					// 等待源加載完成後添加圖層
 					await sourceLoaded;
 					this.addMapLayer(map_config);
 
 
-		
+
 				} catch (error) {
 					console.error('Failed to add source:', error);
 					// 清理已添加的源（如果存在）
@@ -454,6 +478,18 @@ export const useMapStore = defineStore("map", {
 		// 4-1. Using the mapbox source and map config, create a new layer
 		// The styles and configs can be edited in /assets/configs/mapbox/mapConfig.js
 		addMapLayer(map_config) {
+			// 特別處理 terrain 開關
+			if (map_config.type === "terrain") {
+				const exaggeration = map_config.paint?.exaggeration || 1.5;
+				this.map.setTerrain({ source: 'mapbox-dem', exaggeration });
+				this.currentVisibleLayers.push(map_config.layerId);
+				this.mapConfigs[map_config.layerId] = map_config;
+				this.loadingLayers = this.loadingLayers.filter(
+					(el) => el !== map_config.layerId
+				);
+				return; // 不繼續加圖層
+			}
+
 			let extra_paint_configs = {};
 			let extra_layout_configs = {};
 			if (map_config.icon) {
@@ -811,6 +847,16 @@ export const useMapStore = defineStore("map", {
 				this.loadingLayers = this.loadingLayers.filter(
 					(el) => el !== mapLayerId
 				);
+
+				// 🎯 特別處理 terrain 類型（非圖層）
+				if (element.type === "terrain") {
+					this.map.setTerrain(null); // 關閉地形渲染
+					this.currentVisibleLayers = this.currentVisibleLayers.filter(
+						(id) => id !== mapLayerId
+					);
+					return; // 不進行後續圖層處理
+				}
+
 				if (mapLayerId.indexOf("-arc") !== -1) {
 					this.deckGlLayer[mapLayerId].config.visible = false;
 					this.renderDeckGLLayer();

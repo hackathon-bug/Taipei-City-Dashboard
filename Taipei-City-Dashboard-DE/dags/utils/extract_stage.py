@@ -1,3 +1,9 @@
+import os
+import sys
+
+dags_path = os.path.join(os.getcwd(), 'dags')
+sys.path.append(dags_path)
+
 import json
 import os
 import shutil
