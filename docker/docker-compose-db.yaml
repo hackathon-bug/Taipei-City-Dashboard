@@ -44,6 +44,7 @@ services:
       - "8889:80"
     volumes:
       - pgadmin-data:/var/lib/pgadmin
+      - "D:/Hackathon/Taipei-City-Dashboard/db_backup:/var/lib/pgadmin/storage/pga_user_305labcomputer_gmail.com"
 
 networks:
   default:

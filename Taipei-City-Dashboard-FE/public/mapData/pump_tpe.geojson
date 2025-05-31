@@ -1,0 +1,975 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5284,25.0722 ]
+    },
+    "properties": {
+    "station_name":"新生擴"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5284,25.0722 ]
+    },
+    "properties": {
+    "station_name":"特一右"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.611989,25.0477 ]
+    },
+    "properties": {
+    "station_name":"勤力"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5688,25.06225 ]
+    },
+    "properties": {
+    "station_name":"撫遠"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.612,25.06493 ]
+    },
+    "properties": {
+    "station_name":"康寧"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5963,25.06086 ]
+    },
+    "properties": {
+    "station_name":"長壽"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5835,25.05545 ]
+    },
+    "properties": {
+    "station_name":"成美"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5086,25.09276 ]
+    },
+    "properties": {
+    "station_name":"社子"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5454,24.98646 ]
+    },
+    "properties": {
+    "station_name":"埤腹"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.535,25.00979 ]
+    },
+    "properties": {
+    "station_name":"景美"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5236,25.01942 ]
+    },
+    "properties": {
+    "station_name":"古亭"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.535,25.00979 ]
+    },
+    "properties": {
+    "station_name":"興隆"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5183,25.0813 ]
+    },
+    "properties": {
+    "station_name":"劍潭"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5274,25.07134 ]
+    },
+    "properties": {
+    "station_name":"圓山"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5341,25.07398 ]
+    },
+    "properties": {
+    "station_name":"中山"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5289,25.07241 ]
+    },
+    "properties": {
+    "station_name":"建國"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5289,25.07241 ]
+    },
+    "properties": {
+    "station_name":"建國擴"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5284,25.07222 ]
+    },
+    "properties": {
+    "station_name":"新生"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5284,25.0722 ]
+    },
+    "properties": {
+    "station_name":"特一左"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5497,25.07251 ]
+    },
+    "properties": {
+    "station_name":"濱江"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.6175,25.06658 ]
+    },
+    "properties": {
+    "station_name":"康樂"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.6108,25.06347 ]
+    },
+    "properties": {
+    "station_name":"南湖"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.6135,25.04921 ]
+    },
+    "properties": {
+    "station_name":"南深左"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.6146,25.04854 ]
+    },
+    "properties": {
+    "station_name":"南深右"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.616192,25.049328 ]
+    },
+    "properties": {
+    "station_name":"大坑左"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.616307,25.049017 ]
+    },
+    "properties": {
+    "station_name":"大坑右"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5734,25.05861 ]
+    },
+    "properties": {
+    "station_name":"新民權"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5627,25.07677 ]
+    },
+    "properties": {
+    "station_name":"環山"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5078,25.08018 ]
+    },
+    "properties": {
+    "station_name":"迪化"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5716,24.99519 ]
+    },
+    "properties": {
+    "station_name":"萬芳"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5733,24.98788 ]
+    },
+    "properties": {
+    "station_name":"道南"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5538,24.9803 ]
+    },
+    "properties": {
+    "station_name":"保儀"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5543,24.98342 ]
+    },
+    "properties": {
+    "station_name":"實踐"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5534,24.9865 ]
+    },
+    "properties": {
+    "station_name":"中港"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5277,25.05883 ]
+    },
+    "properties": {
+    "station_name":"民權"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.6207,25.05431 ]
+    },
+    "properties": {
+    "station_name":"誠正"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5112,25.09613 ]
+    },
+    "properties": {
+    "station_name":"士林"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5112,25.09613 ]
+    },
+    "properties": {
+    "station_name":"士林二"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.4991,25.10653 ]
+    },
+    "properties": {
+    "station_name":"洲美二"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.4989,25.11025 ]
+    },
+    "properties": {
+    "station_name":"洲美一"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.4953,25.11356 ]
+    },
+    "properties": {
+    "station_name":"大業二"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.4906,25.11607 ]
+    },
+    "properties": {
+    "station_name":"下八仙"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5282,25.10111 ]
+    },
+    "properties": {
+    "station_name":"芝山"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5289,25.09937 ]
+    },
+    "properties": {
+    "station_name":"福德"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5263,25.10257 ]
+    },
+    "properties": {
+    "station_name":"福林"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5197,25.10016 ]
+    },
+    "properties": {
+    "station_name":"文昌"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5318,25.04606 ]
+    },
+    "properties": {
+    "station_name":"林森"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5272,25.05267 ]
+    },
+    "properties": {
+    "station_name":"長安"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5279,25.05279 ]
+    },
+    "properties": {
+    "station_name":"長春"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5269,25.05827 ]
+    },
+    "properties": {
+    "station_name":"民生"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5278,25.06142 ]
+    },
+    "properties": {
+    "station_name":"錦州"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.6172,25.04637 ]
+    },
+    "properties": {
+    "station_name":"福山"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.6124,25.06213 ]
+    },
+    "properties": {
+    "station_name":"南港"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5962,25.05864 ]
+    },
+    "properties": {
+    "station_name":"成功"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5825,25.05234 ]
+    },
+    "properties": {
+    "station_name":"玉成"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5825,25.05234 ]
+    },
+    "properties": {
+    "station_name":"玉成擴"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5722,25.05069 ]
+    },
+    "properties": {
+    "station_name":"南京"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5702,25.05452 ]
+    },
+    "properties": {
+    "station_name":"松山"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5738,25.07138 ]
+    },
+    "properties": {
+    "station_name":"陽光"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5729,25.0744 ]
+    },
+    "properties": {
+    "station_name":"港墘"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5162,25.07865 ]
+    },
+    "properties": {
+    "station_name":"大龍"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5558,25.07781 ]
+    },
+    "properties": {
+    "station_name":"北安"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.547,25.07739 ]
+    },
+    "properties": {
+    "station_name":"大直"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.540431,25.078394 ]
+    },
+    "properties": {
+    "station_name":"大直二"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.4888,25.03093 ]
+    },
+    "properties": {
+    "station_name":"雙園"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5064,25.04989 ]
+    },
+    "properties": {
+    "station_name":"忠孝"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5082,25.05725 ]
+    },
+    "properties": {
+    "station_name":"六館"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.476889,25.105186 ]
+    },
+    "properties": {
+    "station_name":"社增一"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.482136,25.103425 ]
+    },
+    "properties": {
+    "station_name":"社增二"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.490633,25.112939 ]
+    },
+    "properties": {
+    "station_name":"社增三"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.496214,25.112939 ]
+    },
+    "properties": {
+    "station_name":"社增四"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.474942,25.105678 ]
+    },
+    "properties": {
+    "station_name":"中洲"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5656,24.98171 ]
+    },
+    "properties": {
+    "station_name":"木新"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5179,25.10263 ]
+    },
+    "properties": {
+    "station_name":"文林"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5179,25.10263 ]
+    },
+    "properties": {
+    "station_name":"文林二"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5034,25.12413 ]
+    },
+    "properties": {
+    "station_name":"奇岩"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.500577,25.118125 ]
+    },
+    "properties": {
+    "station_name":"北憲"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5006,25.11968 ]
+    },
+    "properties": {
+    "station_name":"大業東"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.474741,25.109636 ]
+    },
+    "properties": {
+    "station_name":"社臨一"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.478019,25.109992 ]
+    },
+    "properties": {
+    "station_name":"社臨二"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.484658,25.112364 ]
+    },
+    "properties": {
+    "station_name":"社臨三"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.49545,25.109219 ]
+    },
+    "properties": {
+    "station_name":"社臨四"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.496278,25.100969 ]
+    },
+    "properties": {
+    "station_name":"社臨五"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.470469,25.107117 ]
+    },
+    "properties": {
+    "station_name":"社臨六"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.483536,25.1028 ]
+    },
+    "properties": {
+    "station_name":"社臨七"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.491114,25.098553 ]
+    },
+    "properties": {
+    "station_name":"社臨八"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.496419,25.097725 ]
+    },
+    "properties": {
+    "station_name":"社臨九"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.496817,25.093658 ]
+    },
+    "properties": {
+    "station_name":"社臨十"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.56,24.97916 ]
+    },
+    "properties": {
+    "station_name":"老泉溪"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.515346,25.089513 ]
+    },
+    "properties": {
+    "station_name":"大南"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5662,24.98012 ]
+    },
+    "properties": {
+    "station_name":"無名溪"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5121,25.09906 ]
+    },
+    "properties": {
+    "station_name":"洲美"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5223,25.10984 ]
+    },
+    "properties": {
+    "station_name":"東華"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5538,24.9803 ]
+    },
+    "properties": {
+    "station_name":"樟新"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5341,25.07398 ]
+    },
+    "properties": {
+    "station_name":"中山擴"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.499294,25.041344 ]
+    },
+    "properties": {
+    "station_name":"貴陽"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.6209,25.05629 ]
+    },
+    "properties": {
+    "station_name":"經貿"
+    }
+  }
+]
+}
