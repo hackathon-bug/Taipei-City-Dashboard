@@ -18,6 +18,7 @@ import (
 	"TaipeiCityDashboardBE/app/routes"
 	"TaipeiCityDashboardBE/global"
 	"TaipeiCityDashboardBE/logs"
+	"fmt"
 
 	"github.com/fvbock/endless"
 	"github.com/gin-gonic/gin"
@@ -35,6 +36,32 @@ func StartApplication() {
 	// 2. Initiate default Gin router with logger and recovery middleware
 	routes.Router = gin.Default()
 
+	// 2.5 init redis
+	users, _, _, err := models.GetAllUsers(0,0,"","","","")
+	if err != nil{
+		panic(err)
+	}
+	const blackListSet = "user:blacklist"
+    const whiteListSet = "user:whitelist"
+	for _, user := range users {
+        userIDStr := fmt.Sprintf("%d", user.ID)
+
+		if err := cache.Redis.Del(blackListSet, whiteListSet).Err(); err != nil {
+			panic("delete black list and white list from redis error:" + err.Error())
+		}
+        if user.IsBlacked != nil && *user.IsBlacked {
+            if err := cache.Redis.SAdd(blackListSet, userIDStr).Err(); err != nil {
+                panic("add black list to redis error:" + err.Error())
+            }
+        }
+        if user.IsWhitelist != nil && *user.IsWhitelist {
+            if err := cache.Redis.SAdd(whiteListSet, userIDStr).Err(); err != nil {
+                panic("add white list to redis error:" + err.Error())
+            }
+        }
+    }
+
+
 	// 3. Add common middlewares that need to run on all routes
 	routes.Router.Use(middleware.AddCommonHeaders)
 	// routes.Router.Use(cors.New(cors.Config{
@@ -51,7 +78,7 @@ func StartApplication() {
 	// 5. Configure http server
 	addr := global.GinAddr
 
-	err := endless.ListenAndServe(addr, routes.Router)
+	err = endless.ListenAndServe(addr, routes.Router)
 	if err != nil {
 		logs.Warn(err)
 	}

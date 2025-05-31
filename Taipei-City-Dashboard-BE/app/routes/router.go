@@ -38,7 +38,6 @@ func ConfigureRoutes() {
 	configureIncidentRoutes()
 	// configureWsRoutes()
 	configureContributorRoutes()
-	configureWeatherForecastRoutes()
 }
 
 func configureAuthRoutes() {
@@ -178,8 +177,3 @@ func configureContributorRoutes() {
 // 		wsRoutes.PUT("/write/", controllers.WriteMap)
 // 	}
 // }
-
-func configureWeatherForecastRoutes(){
-	weatherForecastRoutes := RouterGroup.Group("/weather_forecast")
-	weatherForecastRoutes.GET("/",controllers.GetFirstWeatherForecast)
-}

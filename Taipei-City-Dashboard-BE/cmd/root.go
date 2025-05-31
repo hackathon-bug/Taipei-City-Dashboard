@@ -53,7 +53,6 @@ var initDashboardDBCmd = &cobra.Command{
 		app.InsertDashbaordSampleData()
 	},
 }
-
 // Execute initializes Cobra and adds the checkExpiredCmd to the root command.
 func Execute() {
 	rootCmd.AddCommand(migrateDBCmd)

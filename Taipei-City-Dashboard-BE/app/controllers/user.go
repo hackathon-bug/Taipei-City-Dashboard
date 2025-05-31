@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"strconv"
 
+	"TaipeiCityDashboardBE/app/cache"
 	"TaipeiCityDashboardBE/app/models"
 
 	"github.com/gin-gonic/gin"
@@ -109,6 +110,40 @@ func UpdateUserByID(c *gin.Context) {
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update user"})
 		return
+	}
+	// 4. Update Redis
+	const blackListSet = "user:blacklist"
+    const whiteListSet = "user:whitelist"
+	userIDStr := strconv.Itoa(userID)
+	isWhiteListed := *user.IsWhitelist
+	isBlackListed := *user.IsBlacked
+	if isWhiteListed {
+		err = cache.Redis.SAdd(whiteListSet, userIDStr).Err(); 
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update user white list in redis"})
+			return
+		}
+	} 
+	if !isWhiteListed {
+		err = cache.Redis.SRem(whiteListSet, userIDStr).Err(); 
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update user white list in redis"})
+			return
+		}
+	}
+	if isBlackListed {
+		err = cache.Redis.SAdd(blackListSet, userIDStr).Err(); 
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update user black list in redis"})
+			return
+		}
+	}
+	if !isBlackListed{
+		err = cache.Redis.SRem(blackListSet, userIDStr).Err(); 
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update user black list in redis"})
+			return
+		}
 	}
 
 	c.JSON(http.StatusOK, gin.H{"status": "success", "user": user})
